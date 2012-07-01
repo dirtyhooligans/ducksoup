@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+BODY {
+	margin:0;
+	padding:0;
+	}
+
+img {border: none;}
+
+#header {
+	height:86px;
+	width:100%;
+	background-color:#252525;
+	}

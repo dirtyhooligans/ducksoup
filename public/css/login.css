@@ -1,0 +1,248 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+	width:100%;
+	height:100%;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#4a4a4a;
+}
+
+
+#main-cont{
+	position: absolute;
+	top: 50%;
+	display: table-cell; 
+	vertical-align: middle;
+	left: 50%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	#main-cont{
+		position: absolute;
+		display: table-cell; 
+		vertical-align: middle;
+		left: 50%;
+		bottom:50%;
+		margin-left:0px;
+	}
+}
+
+#login-footer{
+	position: fixed;
+	width:100%;
+	bottom:0;
+	left:0;
+	height:38px;
+	
+}
+#login-status-cont{
+	float:left;
+	padding-left:56px;
+	padding-bottom:10px;
+	padding-top:4px;
+	
+}
+#login-status-cont img{
+	float:left;
+}
+#login-status-cont .msg{
+	float:left;
+	margin-left:6px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #999;
+	padding-top:0px;
+}
+
+#login-footer .menu{
+	float:left;
+	padding-left:30px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #575956;
+}
+
+#login-footer .copyright{
+	float:right;	
+	padding-right: 30px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color:#969994;
+}
+
+input, textarea {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:24px;
+	color:#b3b3b2;
+	background-image: url(../images/login-input-bg.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	height: 43px;
+	width: 294px;
+	padding-left: 15px;
+	padding-right:15px;
+	margin-top:15px;
+}
+.secondary{
+	padding-top:8px;
+	width:324px;
+}
+.form_btn{
+	float:right;
+	padding-right:10px;
+	margin:-10px;
+}
+.alt_options{
+	float:right;
+	height:29px;
+	padding-top:5px;
+	padding-right:20px;
+}
+.alt_options a{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #84b536;
+	text-decoration: none;	
+}
+.alt_options a:link{
+	
+}
+.alt_options a:hover{
+	color: #b3b3b2;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #b3b3b2;
+}
+
+
+#send-btn{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#575956;
+	background-image: url(../images/login-btn-bg.png);
+	background-repeat: no-repeat;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	height: 29px;
+	width: 93px;
+	margin-right:30px;
+	
+}
+#send-btn:hover{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#858782;
+	background-image: url(../images/login-btn-bg-over.png);
+	background-repeat: no-repeat;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	height: 29px;
+	width: 93px;	
+}
+
+#login-header{
+	position:fixed;
+	right:30px;
+	top:34px;
+	width:512px;
+	height:72px;
+	
+}
+
+#login-cont{
+	position:relative;
+	float:left;
+	left:-380px;
+	top:-130px;
+	width:720px;
+	margin-right:-410px;
+}
+#login-cont .left{
+	position:relative;
+	float:left;
+	width:300px;
+}
+#login-cont .form-name{
+	float:left;
+	color:#5c615a;
+	font-size:36px;
+	margin-left:-40px;
+	text-transform: lowercase;
+}
+#login-cont .right{
+	margin-top:30px;
+	float:right;
+	width:320px;
+	padding-top:10px;
+}
+
+#login-cont a{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #84b536;
+	text-decoration: none;	
+}
+#login-cont a:hover{
+	color: #b3b3b2;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #b3b3b2;
+}
+#login-cont .right .question{
+	font-size:36px;
+	color:#666B63;
+	text-decoration:none;
+	font-weight:normal;
+}
+#login-cont .right .answer{
+	font-size:24px;
+	color:#666B63;
+	text-decoration:none;
+	font-weight:normal;
+}
+#login-cont .right .explain{
+	margin-right:0px;
+	float:right;
+	font-size:12px;
+	color:#b3b3b2;
+	text-decoration:none;
+	font-weight:normal;
+}
+
+#error-cont{
+	position:absolute;
+	float:left;
+	left:-280px;
+	top:-160px;
+	width:440px;
+	margin-right:-300px;
+}
+#error-cont .title{
+	position:relative;
+	left:-14px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #d45c20;
+}
+
+#error-cont .reason{
+	text-transform: lowercase;
+	color: #d45c20;
+}
+
+#error-cont .taunt{
+	text-transform: lowercase;
+	color: #b3b3b2;
+	width:190px;	
+	font-size: 11px;
+}

@@ -1,0 +1,102 @@
+@CHARSET "UTF-8";
+
+#header{
+	position:fixed;
+	top:0;
+	left:0;
+	height:88px;
+	width:100%;
+	z-index:99;
+	
+}
+
+#header .logo{
+	padding: 10px;	
+}
+
+#header .user{
+	float:right;
+	padding: 5px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#header .user .name{
+	float:left;
+	font-size: 11px;
+	color: #a4a8ab;
+	line-height:12px;
+}
+#header .user .vertical_line{
+	float:left;
+	background-color:#3a3c3d;
+	width:1px;
+	height:24px;
+	margin:0px 7px 0px 9px;
+}
+#header .user .name .welcome{
+	color: #5f6365;	
+}
+
+#header .user .logout{
+	float:left;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+}
+
+#header .guest{
+	float:right;
+	padding: 10px;	
+}
+
+#header .guest .login
+{
+	float:left;
+}
+
+#header .guest .vertical_line
+{
+	float:left;
+	background-color:#CCC;
+	width:1px;
+	height:24px;
+	margin:-3px 7px 0px 9px;
+}
+
+#header .guest .register
+{
+	float:left;
+}
+
+#header .guest a:link, 
+#header .guest a:visited,
+#header .user a:link, 
+#header .user a:visited
+{
+	color: #86a9ba;
+	text-decoration: none;
+}
+
+#header .guest a:hover,
+#header .guest a:active,
+#header .user a:hover,
+#header .user a:active
+{
+	color: #cdd8dd;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #cdd8dd;
+	padding-bottom:3px;
+}
+
+#auth-cont{
+	position:relative;
+	width:80%;
+	min-height:320px;
+	background-color:#303132;
+	padding:5px;
+	border: 1px solid #444;	
+	margin-bottom:10px;
+	min-width:690px;
+}
