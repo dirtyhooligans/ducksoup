@@ -39,6 +39,19 @@ DOCUMENTATION
 
 	updateUser
 
+	validateUserKey
+
+	createUserKey
+
+-Connect:
+
+	connectToUser
+
+	disconnectFromUser
+
+	getConnectedUsersByUser
+
+
 
 -Groups:
 
@@ -108,8 +121,11 @@ DOCUMENTATION
 	* database tables *
 	----------------------------
 	collections
-		id, name, public, created, created_by
+		id, name, type_id, public, created, created_by
 	
+	collection_types
+		id, type
+
 	collection_items
 		collection_id, item_id, added, added_by
 
@@ -124,9 +140,17 @@ DOCUMENTATION
 	----------------------------
 	getCollection
 
+	createCollection
+
+	deleteCollection
+
 	getCollectionsByUser
 
 	getCollectionsByGroup
+
+	getCollectionTypes
+
+	getCollectionsByType
 
 	addCollectionToGroup
 
@@ -136,4 +160,3 @@ DOCUMENTATION
 
 	removeCollectionFromUser
 
-	

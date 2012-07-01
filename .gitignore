@@ -11,3 +11,7 @@ Thumbs.db
 
 /applications/*
 !ducksoup
+/tmp/cache/*
+/tmp/data/*
+/tmp/logs/*
+/tmp/sessions/*
