@@ -267,9 +267,7 @@ class Db_Mysqli
         }
         else
         {
-
             $return['error'] = Error::db('Mysqli::Insert', $this->_connection->error, $this->_connection->errno);
-		
 		}
 		
 		return $return;
@@ -308,19 +306,22 @@ class Db_Mysqli
             $return['error'] = Error::db('Mysqli::Delete', $this->_connection->error, $this->_connection->errno);
 			//$return['error'] = Core_Exception($this->_connection->error . ' - ' .$this->_connection->errno);	
 		}
-		
-		
-		
+
 		return $return;
 	}
 	
-	public static function ChangeDB($DB = 'main')
+	public function ChangeDB($DB = 'main')
     {
+    	if ( $this->Db == $DB )
+    		return;
+
         $this->Host = $this->config->$DB->host;
-        $this->User = $this->config->$DB->host;
-        $this->Pass = $this->config->$DB->host;
-        $this->Name = $this->config->$DB->host;
-		$this->Port = $this->config->$DB->host;
+        $this->User = $this->config->$DB->user;
+        $this->Pass = $this->config->$DB->pass;
+        $this->Name = $this->config->$DB->name;
+		$this->Port = $this->config->$DB->port;
+
+		$this->connect();
     }
 	
 	public function escapeString($str)

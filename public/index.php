@@ -75,8 +75,11 @@ if ($match_resource_ext = preg_match("/\.(txt|css|js|html|htm|jpg|gif|swf|png|ot
 	
 	switch ($ext[1])
 	{
-		case "js" :
+		
 		case "txt": $ctype="text/plain"; 
+			break;
+		case "js" :
+			$ctype="text/javascript";
 			break;
 		case "html": $ctype="text/html"; 
 		case "htm": $ctype="text/html"; 
@@ -111,7 +114,7 @@ if ($match_resource_ext = preg_match("/\.(txt|css|js|html|htm|jpg|gif|swf|png|ot
 	header("ETag: ".sprintf("\"%x-%x-%x\"", $info['ino'], $info['size'], $info['mtime']));
 	header("Accept-Ranges: bytes");
 	header("Expires: ".gmdate("D, j M Y H:i:s e", $info['mtime']+2592000));
-	header("Content-Type: text/css"); // note: this was text/html for some reason?
+	header("Content-Type: text/plain"); // note: this was text/html for some reason?
 
 	ob_start();
 	//ob_start("ob_gzhandler");
