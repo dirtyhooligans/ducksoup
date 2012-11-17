@@ -108,13 +108,17 @@ if ($match_resource_ext = preg_match("/\.(txt|css|js|html|htm|jpg|gif|swf|png|ot
 		default: $ctype="application/force-download"; 
 	}
 
+// TODO:
+//	$info = is_file( $resource_file ) ? stat($resource_file) : false;
+//	if ( $info === TRUE ) $info = is_file( $base_resource_file ) ? stat($base_resource_file) : array();
+
 	header("Date: ".gmdate("D, j M Y H:i:s e", time()));
 	header("Cache-Control: max-age=2592000");
 	header("Last-Modified: ".gmdate("D, j M Y H:i:s e", $info['mtime']));
 	header("ETag: ".sprintf("\"%x-%x-%x\"", $info['ino'], $info['size'], $info['mtime']));
 	header("Accept-Ranges: bytes");
 	header("Expires: ".gmdate("D, j M Y H:i:s e", $info['mtime']+2592000));
-	header("Content-Type: text/plain"); // note: this was text/html for some reason?
+	//header("Content-Type: text/plain"); // note: this was text/html for some reason?
 
 	ob_start();
 	//ob_start("ob_gzhandler");
